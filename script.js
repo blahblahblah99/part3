@@ -15,3 +15,9 @@ console.log(strChar);
 
 strChar = myString.charAt(10);
 console.log(strChar);
+
+let sliced = myString.slice(5, 9);
+console.log(sliced);
+
+let substr = anotherString.substring(6, 9);
+console.log(substr);
