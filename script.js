@@ -38,3 +38,17 @@ console.log(str);
 
 str = myString.split(" ");
 console.log(str);
+
+function saveText(filename, text) {
+    const file = new Blob([myString], { type: 'text/plain' });
+    const fileURL = URL.createObjectURL(file);
+};
+
+function readText(filename) {
+  
+};
+
+const svButton = document.getElementById('save');
+svButton.addEventListener('click', saveText("myFile.txt", myString));
+const rdButton = document.getElementById('read');
+rdButton.addEventListener('click', readText("myFile.txt"))
