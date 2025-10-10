@@ -7,22 +7,48 @@ console.log(anotherString);
 console.log(hello);
 console.log(myName);
 
-let strLength = myString.length;
-console.log(strLength);
+let str = myString.length;
+console.log(str);
 
-let strChar = myString.charAt(0);
-console.log(strChar);
+str = myString.charAt(0);
+console.log(str);
 
-strChar = myString.charAt(10);
-console.log(strChar);
+str = myString.charAt(10);
+console.log(str);
 
-let sliced = myString.slice(5, 9);
-console.log(sliced);
+str = myString.slice(5, 9);
+console.log(str);
 
-let substr = anotherString.substring(6, 9);
-console.log(substr);
+str = anotherString.substring(6, 9);
+console.log(str);
 
-myName = myName.toUpperCase();
-console.log(myName);
-myName = myName.toLowerCase();
-console.log(myName);
+str = myName.toUpperCase();
+console.log(str);
+str = myName.toLowerCase();
+console.log(str);
+
+str = hello.concat(myName);
+console.log(str);
+
+str = anotherString.trim();
+console.log(str);
+
+str = myString.replace("is a", "");
+console.log(str);
+
+str = myString.split(" ");
+console.log(str);
+
+function saveText(filename, text) {
+    const file = new Blob([myString], { type: 'text/plain' });
+    const fileURL = URL.createObjectURL(file);
+};
+
+function readText(filename) {
+  
+};
+
+const svButton = document.getElementById('save');
+svButton.addEventListener('click', saveText("myFile.txt", myString));
+const rdButton = document.getElementById('read');
+rdButton.addEventListener('click', readText("myFile.txt"))
