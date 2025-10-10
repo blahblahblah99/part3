@@ -45,7 +45,7 @@ function saveText(filename, text) {
 };
 
 function readText(filename) {
-  
+  console.log("no!");
 };
 
 const svButton = document.getElementById('save');
