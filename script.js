@@ -21,3 +21,8 @@ console.log(sliced);
 
 let substr = anotherString.substring(6, 9);
 console.log(substr);
+
+myName = myName.toUpperCase();
+console.log(myName);
+myName = myName.toLowerCase();
+console.log(myName);
