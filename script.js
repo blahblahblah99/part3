@@ -6,3 +6,12 @@ console.log(myString);
 console.log(anotherString);
 console.log(hello);
 console.log(myName);
+
+let strLength = myString.length;
+console.log(strLength);
+
+let strChar = myString.charAt(0);
+console.log(strChar);
+
+strChar = myString.charAt(10);
+console.log(strChar);
