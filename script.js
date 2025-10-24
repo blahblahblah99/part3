@@ -51,11 +51,7 @@ function saveText(filename, text) {
 
   document.body.removeChild(element);
 };
-
-<<<<<<< Updated upstream
-function readText(filename) {
   
-=======
 function readText() {
   const fileInput = document.getElementById('fileinput');
   const file = fileInput.files[0];
@@ -67,7 +63,6 @@ function readText() {
   };
 
   reader.readAsText(file);
->>>>>>> Stashed changes
 };
 
 const svButton = document.getElementById('save');
