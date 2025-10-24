@@ -40,7 +40,14 @@ str = myString.split(" ");
 console.log(str);
 
 function saveText(text) {
-  // insert code here
+  const stringVal = text;
+
+  const fileName = "output.txt";
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(stringVal));
+  element.setAttribute('download', fileName);
+
+  element.click();
 };
 
 function readText() {
