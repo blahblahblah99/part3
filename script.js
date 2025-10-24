@@ -40,29 +40,11 @@ str = myString.split(" ");
 console.log(str);
 
 function saveText(text) {
-  const element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', "MyFile.txt");
-
-  element.style.display = 'none'; 
-  document.body.appendChild(element);
-
-  element.click();
-
-  document.body.removeChild(element);
+  // insert code here
 };
 
 function readText() {
-  const fileInput = document.getElementById('fileinput');
-  const file = fileInput.files[0];
-
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const text = e.target.result;
-    document.getElementById('output').textContent = "File contents: " + text;
-  };
-
-  reader.readAsText(file);
+  // insert code here
 };
 
 const svButton = document.getElementById('save');
