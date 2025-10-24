@@ -40,15 +40,37 @@ str = myString.split(" ");
 console.log(str);
 
 function saveText(filename, text) {
-    const file = new Blob([myString], { type: 'text/plain' });
-    const fileURL = URL.createObjectURL(file);
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none'; 
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 };
 
+<<<<<<< Updated upstream
 function readText(filename) {
   
+=======
+function readText() {
+  const fileInput = document.getElementById('fileinput');
+  const file = fileInput.files[0];
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const text = e.target.result;
+    document.getElementById('output').textContent = "File contents: " + text;
+  };
+
+  reader.readAsText(file);
+>>>>>>> Stashed changes
 };
 
 const svButton = document.getElementById('save');
-svButton.addEventListener('click', saveText("myFile.txt", myString));
+svButton.addEventListener('click', function() { saveText("myFile.txt", myString); });
 const rdButton = document.getElementById('read');
-rdButton.addEventListener('click', readText("myFile.txt"))
+rdButton.addEventListener('click', function() { readText(); });
