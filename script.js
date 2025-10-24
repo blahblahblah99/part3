@@ -39,10 +39,10 @@ console.log(str);
 str = myString.split(" ");
 console.log(str);
 
-function saveText(filename, text) {
+function saveText(text) {
   const element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
+  element.setAttribute('download', "MyFile.txt");
 
   element.style.display = 'none'; 
   document.body.appendChild(element);
@@ -66,6 +66,6 @@ function readText() {
 };
 
 const svButton = document.getElementById('save');
-svButton.addEventListener('click', function() { saveText("myFile.txt", myString); });
+svButton.addEventListener('click', function() { saveText(myString); });
 const rdButton = document.getElementById('read');
 rdButton.addEventListener('click', function() { readText(); });
