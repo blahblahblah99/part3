@@ -51,7 +51,17 @@ function saveText(text) {
 };
 
 function readText() {
-  // insert code here
+  const fileInput = document.getElementById('fileinput');
+  const file = fileInput.files[0];
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const fileContent = e.target.result;
+
+    console.log("Your text file contents are: " + fileContent);
+  };
+
+  reader.readAsText(file);
 };
 
 const svButton = document.getElementById('save');
