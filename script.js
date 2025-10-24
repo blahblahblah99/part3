@@ -51,7 +51,7 @@ function saveText(text) {
 
   document.body.removeChild(element);
 };
-  
+
 function readText() {
   const fileInput = document.getElementById('fileinput');
   const file = fileInput.files[0];
