@@ -39,16 +39,15 @@ console.log(str);
 str = myString.split(" ");
 console.log(str);
 
-function saveText(filename, text) {
-    const file = new Blob([myString], { type: 'text/plain' });
-    const fileURL = URL.createObjectURL(file);
+function saveText(text) {
+  // insert code here
 };
 
-function readText(filename) {
-  console.log("no!");
+function readText() {
+  // insert code here
 };
 
 const svButton = document.getElementById('save');
-svButton.addEventListener('click', saveText("myFile.txt", myString));
+svButton.addEventListener('click', function() { saveText(myString); });
 const rdButton = document.getElementById('read');
-rdButton.addEventListener('click', readText("myFile.txt"))
+rdButton.addEventListener('click', function() { readText(); });
